@@ -1,0 +1,112 @@
+.projectsSection {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+    
+.projectsSectionHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+    
+.projectsSectionHeader p {
+    color: var(--color-complementary);
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.projectsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.projectCard {
+    width: 360px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in;
+}
+
+.projectCard:hover {
+    transform: translate(0px, -10px);
+}
+
+.projectImage {
+    width: 100%;
+    height: 177px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.projectLogo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 10px;
+    align-self: center;
+    margin-top: -30px;
+}
+
+.projectTitleContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.projectTitleContainer p {
+    color: var(--color-text-secondary);
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.projectDescription {
+    color: var(--color-text-primary);
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.divider {
+    width: auto;
+    height: 1px;
+    background-color: var(--color-primary);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.actionsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.downloadButton,
+.viewCodeButton {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-complementary);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.viewCodeButton {
+    margin-left: 10px;
+}

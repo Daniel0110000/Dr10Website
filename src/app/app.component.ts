@@ -4,13 +4,14 @@ import { NavigationButtonItem } from './NavigationButtonItem';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { SkillSection } from './SkillSection';
 import { ExperienceItem } from './ExperienceItem';
+import { ProjectItem } from './ProjectItem';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrls: ["./app.component.scss", "./app.navigationBar.scss", "app.aboutMe.scss", "app.skills.scss", "app.experience.scss"]
+  styleUrls: ["./app.component.scss", "./app.navigationBar.scss", "./app.aboutMe.scss", "./app.skills.scss", "./app.experience.scss", "./app.projects.scss"]
 })
 export class AppComponent {
 
@@ -117,6 +118,41 @@ export class AppComponent {
     { companyName: "Vico's Painting Concepts", date: "March 2022 - June 2022", companyLogo: this.imageBasePath + "vicos.webp", description: "I developed a website designed to facilitate efficient and quick communication between users and the company for service requests. This web platform was built using HTML, CSS, Bootstrap, JavaScript, and Node.js, with MySQL as the database. I conducted thorough tests to ensure the stability and functionality of the site, ensuring that users can interact securely and efficiently." },
     { companyName: "SkyOne Group", date: "January 2022 - February 2022", companyLogo: this.imageBasePath + "skyOne.webp", description: "I carried out the migration of an application written in Java to Kotlin, enhancing its functionality by implementing a clean architecture along with a Model-View-ViewModel (MVVM) architecture to make the application more scalable. I ensured that all components worked correctly and complied with security standards. Additionally, I worked on code optimization to ensure optimal performance." },
     { companyName: "SkyOne Group", date: "November ,  e2021 - January 2022", companyLogo: this.imageBasePath + "skyOne.webp", description: "I developed a website for purchasing subscriptions for an entertainment application, using HTML, CSS, and JavaScript. I utilized the PayPal API as a secure, easy, and convenient payment method for users. I conducted thorough testing to ensure the stability and functionality of the website, enabling users to make their purchases quickly and securely. Additionally, I ensured that the website stayed up-to-date with the latest security and stability standards." }
+  ];
+
+  projects: ProjectItem[] = [
+    { 
+      image: this.imageBasePath + "deepCodeImage.webp", 
+      logo: this.imageBasePath + "deepCodeLogo.webp", 
+      title: "DeepCode Studio", 
+      description: "As a reverse engineering student, while learning assembly language, I noticed the absence of a dedicated code editor for this language. Since I am accustomed to working with editors that facilitate code autocompletion, I decided to create my own editor that covers virtually any type of assembly language. This editor was developed using Kotlin and Jetpack Compose Multiplatform",
+      githubLink: "https://github.com/Daniel0110000/DeepCodeStudio",
+      downloadLink: "https://github.com/Daniel0110000/DeepCodeStudio/releases/tag/1.0.0" 
+    },
+    { 
+      image: this.imageBasePath + "pingImage.webp", 
+      logo: this.imageBasePath + "pingLogo.webp", 
+      title: "Ping", 
+      description: "This project was crucial for my understanding and proficiency in reactive programming on Android. The app facilitates easy messaging among users. It includes a login feature that allows users to sign in with their Google, Facebook, or email and password accounts. Additionally, it boasts an appealing user interface. For authentication and storage of sent messages and multimedia files, the application leverages Firebase",
+      githubLink: "https://github.com/Daniel0110000/Ping",
+      downloadLink: "https://github.com/Daniel0110000/Ping/releases/download/v1.0.0-alpha1/Ping.apk"
+    },
+    { 
+      image: this.imageBasePath + "miauImage.webp", 
+      logo: this.imageBasePath + "miauLogo.webp", 
+      title: "Miau Mart", 
+      description: "As a cat lover, I came up with the idea of creating an app to practice reactive programming and explore the use of Firebase for data storage. This project is an online store for cat products with a cart functionality and a section for making purchases. It was developed using Kotlin and important libraries for its operation",
+      githubLink: "https://github.com/Daniel0110000/Miau-Mart",
+      downloadLink: "https://github.com/Daniel0110000/Miau-Mart/blob/master/app/release/Miau%20Mart.apk" 
+    },
+    { 
+      image: this.imageBasePath + "gameCatalogImage.webp", 
+      logo: this.imageBasePath + "gameCatalogLogo.webp", 
+      title: "Game Catalog",
+      description: "This project represents one of my initial personal endeavors and played a pivotal role in my understanding of the data retrieval process through a video game API. Developed in Java, I utilized the Retrofit library for data extraction and implemented SQLite to locally store the list of favorite games",
+      githubLink: "https://github.com/Daniel0110000/Game-Catalog",
+      downloadLink: "https://github.com/Daniel0110000/Game-Catalog"  
+    }
   ];
 
   selectedButtonIndex: number = 0;
