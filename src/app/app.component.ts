@@ -3,13 +3,14 @@ import { RouterOutlet } from '@angular/router';
 import { NavigationButtonItem } from './NavigationButtonItem';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { SkillSection } from './SkillSection';
+import { ExperienceItem } from './ExperienceItem';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrls: ["./app.component.scss", "./app.navigationBar.scss", "app.aboutMe.scss", "app.skills.scss"]
+  styleUrls: ["./app.component.scss", "./app.navigationBar.scss", "app.aboutMe.scss", "app.skills.scss", "app.experience.scss"]
 })
 export class AppComponent {
 
@@ -108,6 +109,14 @@ export class AppComponent {
         { icon: this.imageBasePath + "ic_blender.webp", title: "Blender" }
       ]
     }
+  ];
+
+  experince: ExperienceItem[] = [
+    { companyName: "Freelancer", date: "December 2022 - Current", companyLogo: this.imageBasePath + "avatar.webp", description: "Over the past 2 years, I have worked as an independent developer for both Android and desktop applications. I have developed both extensive applications and smaller ones for specific individual clients. In these projects, I have used Kotlin, Java, and Jetpack Compose for project development, and I have also employed C++ for creating native libraries, along with other languages and libraries for building mobile and desktop applications." },
+    { companyName: "Vico's Painting Concepts", date: "June 2022 - November 2022", companyLogo: this.imageBasePath + "vicos.webp", description: "I undertook key responsibilities as the manager of the company's website maintenance for a period of five months. During my tenure, I implemented rigorous testing to ensure the stability and functionality of the site, while simultaneously conducting continuous monitoring and code optimization to enhance the user experience. My commitment to quality and efficiency contributed to the optimal performance of the company's digital platform." },
+    { companyName: "Vico's Painting Concepts", date: "March 2022 - June 2022", companyLogo: this.imageBasePath + "vicos.webp", description: "I developed a website designed to facilitate efficient and quick communication between users and the company for service requests. This web platform was built using HTML, CSS, Bootstrap, JavaScript, and Node.js, with MySQL as the database. I conducted thorough tests to ensure the stability and functionality of the site, ensuring that users can interact securely and efficiently." },
+    { companyName: "SkyOne Group", date: "January 2022 - February 2022", companyLogo: this.imageBasePath + "skyOne.webp", description: "I carried out the migration of an application written in Java to Kotlin, enhancing its functionality by implementing a clean architecture along with a Model-View-ViewModel (MVVM) architecture to make the application more scalable. I ensured that all components worked correctly and complied with security standards. Additionally, I worked on code optimization to ensure optimal performance." },
+    { companyName: "SkyOne Group", date: "November ,  e2021 - January 2022", companyLogo: this.imageBasePath + "skyOne.webp", description: "I developed a website for purchasing subscriptions for an entertainment application, using HTML, CSS, and JavaScript. I utilized the PayPal API as a secure, easy, and convenient payment method for users. I conducted thorough testing to ensure the stability and functionality of the website, enabling users to make their purchases quickly and securely. Additionally, I ensured that the website stayed up-to-date with the latest security and stability standards." }
   ];
 
   selectedButtonIndex: number = 0;
