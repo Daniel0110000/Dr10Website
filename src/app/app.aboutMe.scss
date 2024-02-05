@@ -1,0 +1,160 @@
+.aboutMeSection {
+    margin-top: -60px;
+}
+
+.banner {
+    width: 65%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--color-primary);
+}
+
+.nameSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.name {
+    color: var(--color-text-secondary);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.icName {
+    margin-left: 5px;
+}
+
+.shortDescription, .roles, .description {
+    color: var(--color-text-primary);
+    font-size: 15px;
+}
+
+.specialization {
+    color: var(--color-complementary);
+}
+
+.description {
+    margin-top: 8px;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+
+.locationContainer, .githubContainer, .linkedinContainer {
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--color-secondary);
+    border-radius: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.contactInfo div p {
+    color: var(--color-text-primary);
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+.resumeDownloadButton {
+    width: max-content;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--color-complementary);
+    border-radius: 20px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.resumeDownloadButton p {
+    color: var(--color-text-secondary);
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.resumeDownloadButton:hover {
+    cursor: pointer;
+}
+
+.emailContainer {
+    width: max-content;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--color-secondary);
+    border-radius: 30px;
+    margin: 10px auto;
+}
+
+.emailContainer p {
+    color: var(--color-text-secondary);
+    font-size: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.emailActionsContainer {
+    width: max-content;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--color-complementary);
+    border-radius: 0px 30px 30px 0px;
+}
+
+.actionsDivider {
+    width: 1px;
+    height: 70%;
+    background-color: var(--color-text-secondary);
+    border-radius: 5px;
+}
+
+.emailActionsContainer svg {
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+    .banner {
+        width: 100%;
+        height: 130px;
+    }
+
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .emailContainer p {
+        font-size: 15px;
+    }
+
+    .emailContainer svg {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+}

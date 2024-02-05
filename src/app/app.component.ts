@@ -8,7 +8,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrls: ["./app.component.scss", "./app.navigationBar.scss"]
+  styleUrls: ["./app.component.scss", "./app.navigationBar.scss", "app.aboutMe.scss"]
 })
 export class AppComponent {
 
@@ -40,6 +40,7 @@ export class AppComponent {
   ];
 
   selectedButtonIndex: number = 0;
+  readonly email = "cariasdaniel261@gmail.com";
 
   constructor(
     private sanitizer: DomSanitizer
