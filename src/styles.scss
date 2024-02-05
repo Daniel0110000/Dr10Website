@@ -1,5 +1,18 @@
 @import url("./colors.scss");
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba($color: #ABB2BF, $alpha: 0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba($color: #ABB2BF, $alpha: 0.6);
+}
+
 body {
     background-color: var(--color-primary);
 }
