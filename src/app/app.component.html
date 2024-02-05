@@ -1,0 +1,17 @@
+<div class="navigationBarContainer">
+  <div class="navigationBar">
+
+      <img src="../assets/images/icDr10.svg" alt="" class="icDr10">
+
+      @for (item of navigationButtons; track item.index) {
+          <div class="navigationButton" (click)="setSelectedButtonIndex(item.index); scrollToSection(item.id)">
+              <div [className]="selectedButtonIndex == item.index ? 'selectedButtonIconContainer' : 'buttonIconContainer'" [innerHTML]="getSafeHtml(item.icon)"></div>
+              <p class="buttonNavigationTitle"> {{ item.title }} </p>
+          </div>
+      }
+  </div>
+</div>
+
+<svg width="208" height="225" viewBox="0 0 208 225" fill="none" xmlns="http://www.w3.org/2000/svg" class="androidHover">
+  <path d="M218.906 118.622L242.306 78.0938C242.719 77.4 242.962 76.5562 242.962 75.6562C242.962 72.9656 240.787 70.7906 238.097 70.7906C236.306 70.7906 234.741 71.7563 233.897 73.2L233.887 73.2188L210.197 114.253C192.506 106.125 171.816 101.381 150.019 101.381C128.222 101.381 107.531 106.125 88.9219 114.628L89.8406 114.253L66.15 73.2094C65.2969 71.7469 63.7219 70.7719 61.9312 70.7719C59.2406 70.7719 57.0656 72.9469 57.0656 75.6375C57.0656 76.5375 57.3094 77.3719 57.7312 78.0938L57.7219 78.075L81.1219 118.603C40.9406 140.794 13.2844 181.388 9.46874 228.703L9.44061 229.191H290.606C286.762 181.388 259.106 140.794 219.637 118.959L218.925 118.603L218.906 118.622ZM85.2937 189.15C78.825 189.15 73.5844 183.909 73.5844 177.441C73.5844 170.972 78.825 165.731 85.2937 165.731C91.7625 165.731 97.0031 170.972 97.0031 177.441C96.9937 183.9 91.7625 189.141 85.2937 189.15ZM214.706 189.15C208.237 189.15 202.997 183.909 202.997 177.441C202.997 170.972 208.237 165.731 214.706 165.731C221.175 165.731 226.416 170.972 226.416 177.441C226.406 183.9 221.175 189.141 214.706 189.15Z" fill="#282C34"/>
+</svg>

@@ -1,0 +1,94 @@
+.navigationBarContainer {
+    height: 100%;
+    display: flex;
+    position: fixed;
+}
+
+.navigationBar {
+    width: 70px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-secondary);
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.icDr10 {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.navigationButton {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.buttonIconContainer {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.buttonIconContainer:hover {
+    background-color: rgba($color: #FFFFFF, $alpha: 0.1);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.selectedButtonIconContainer {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba($color: #FFFFFF, $alpha: 0.1);
+    border-radius: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.buttonNavigationTitle {
+    color: var(--color-text-primary);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 750px) {
+
+    .navigationBarContainer {
+        width: 100%;
+        height: max-content;
+        position: fixed;
+        bottom: 0;
+    }
+
+    .navigationBar {
+        width: 100%;
+        height: 65px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 20px 20px 0px 0px;
+        margin: 0px;
+    }
+
+    .icDr10 {
+        width: 0px;
+        height: 0px;
+    }
+
+    .navigationButton {
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+
+}

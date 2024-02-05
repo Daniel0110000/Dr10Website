@@ -1,0 +1,13 @@
+.androidHover {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+@media screen and (max-width: 750px) {
+    .androidHover {
+        width: 150px;
+        margin-bottom: 20px;
+    }
+}
