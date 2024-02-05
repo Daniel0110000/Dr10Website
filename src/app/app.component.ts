@@ -5,6 +5,9 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { SkillSection } from './SkillSection';
 import { ExperienceItem } from './ExperienceItem';
 import { ProjectItem } from './ProjectItem';
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
+import { Clipboard } from '@angular/cdk/clipboard';
+import { Mailto, NgxMailtoService } from 'ngx-mailto'; 
 
 @Component({
   selector: 'app-root',
@@ -159,8 +162,38 @@ export class AppComponent {
   readonly email = "cariasdaniel261@gmail.com";
 
   constructor(
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private snackBar: MatSnackBar,
+    private clipboard: Clipboard,
+    private mailtoService: NgxMailtoService
   ){}
+
+
+  /**
+   * Copy the email to the clipboard
+   */
+  copyEmailToClipboard() {
+    this.clipboard.copy(this.email); // Copy the email using [Clipboard]
+  
+    this.snackBar.open("Email copied!", "", {
+      duration: 1500,
+      verticalPosition: "top",
+      horizontalPosition: "end",
+      panelClass: ["snackbar"]
+    });
+  }
+  
+
+  mailto: Mailto = {
+    receiver: this.email
+  };
+
+  /**
+   * Open email using [NgxMailtoService]
+   */
+  sendEmail(){
+    this.mailtoService.open(this.mailto);
+  }
 
   /**
    * Sanitize HTML icon and return as [SafeHtml]
