@@ -86,10 +86,11 @@
     padding-right: 10px;
 }
 
-.resumeDownloadButton p {
+.resumeDownloadButton a {
     color: var(--color-text-secondary);
     font-size: 15px;
     margin-left: 5px;
+    font-family: "Roboto";
 }
 
 .resumeDownloadButton:hover {
